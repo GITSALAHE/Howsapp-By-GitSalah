@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo {
+        position: relative;
+        left: 782px;
+        top: 151px;
+        width: 57%;
+        }
+        .git {
+            width: 6%;
+        }
+        #all{
+            position: absolute;
+            left: 800px;
+            top: 327px;
+        }
+       
+            #task {
+            width: 330px;
+            height: 32px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+    }
+    #all button {
+            outline: none;
+            position: relative;
+            bottom: 6px;
+            z-index: 1;
+            padding: 15px 25px;
+            font-size: 16px;
+            width: 170px;
+            border-radius: 12px;
+            color: #fff;
+            background-color: #3498db;
+            border: none;
+            cursor: pointer;
+            -webkit-box-shadow: 0 9px #2980b9;
+            box-shadow: 0 9px #2980b9;
+}
+    
+    #res {
+        background-color: rebeccapurple;
+    width: 251px;
+    height: 217px;
+    left: 823px;
+    top: 356px;
+        color: white;
+        font-family: Montserrat;
+        position: absolute;
+        overflow: auto;
+    }
+
+        #all button:hover {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+        -webkit-box-shadow: 0 6px #2980b9;
+        box-shadow: 0 6px #2980b9;
+        }
+
+        #all button:actif {
+        -webkit-transform: translateY(7px);
+        transform: translateY(7px);
+        -webkit-box-shadow: 0 2px #2980b9;
+        box-shadow: 0 2px #2980b9;
+        }
+        body{
+            background-image: url(1.jpg);
+            background-repeat: no-repeat;
+            background-image: url(1.jpg);
+            background-repeat: no-repeat;
+            background-size: 1929px 947px;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        #but {
+            width: 50%;
+    position: absolute;
+    left: 836px;
+    top: 574px;
+        }
+        .msg {
+            float: right;
+    margin-right: 6px;
+    margin-top: 7px;
+    background: blue;
+    padding: 7px;
+        }
+        .msg2{
+            background: blue;
+    padding: 7px;
+    margin-left: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="res">
+
+    </div>
+    <div id="but">
+            <input type="text" name="" id="textbox">
+            <br>
+            <button onclick="sendUser1()">send user1</button>
+            <br>
+            
+            
+            <button onclick="sendUser2()">send User2</button>
+    </div>  
+
+    <script>
+        function sendUser1(){
+            var textzone = document.getElementById("textbox").value;
+            var res = document.getElementById("res");
+            var label = document.createElement("label");
+            var esp = document.createElement("br");
+            var esp1 = document.createElement("br");
+            var esp2 = document.createElement("br");
+            label.className = "msg";
+            res.appendChild(label);
+            res.appendChild(esp);
+            res.appendChild(esp1);
+            res.appendChild(esp2);
+            label.innerText = textzone;
+            res.scrollBy(0, 100000);
+            document.getElementById("textbox").value = '';
+        }   
+        function sendUser2(){
+            var textzone = document.getElementById("textbox").value;
+            var res = document.getElementById("res");
+            var label = document.createElement("label");
+            var esp = document.createElement("br");
+            var esp1 = document.createElement("br");
+            var esp2 = document.createElement("br");
+            label.className = "msg2";
+            res.appendChild(label);
+            res.appendChild(esp);
+            res.appendChild(esp1);
+            res.appendChild(esp2);
+            res.scrollBy(0, 100000);
+            label.innerText = textzone;
+        }
+    </script>
+</body>
+</html>
